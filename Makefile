@@ -31,9 +31,8 @@ init: mock update-module
 	cp example.env .env
 
 install-go:
-	sudo snap install go --channel=1.22/stable --classic
+	sudo snap install go --channel=1.23/stable --classic
 	echo 'export GOPATH="$$HOME/go"' >> ~/.profile
-	echo 'export PATH="$$PATH:$$GOPATH/bin"' >> ~/.profile
 	echo 'export PATH="$$PATH:$$GOPATH/bin:/usr/local/go/bin"' >> ~/.profile
 	. ~/.profile
 	go version
